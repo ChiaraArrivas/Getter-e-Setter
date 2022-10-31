@@ -1,41 +1,41 @@
 class Person {
 
-  firstName = "";
-  lastName = "";
-  age = 0;
+  #firstName = "";
+  #lastName = "";
+  #age = 0;
 
   constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+    this.#firstName = firstName;
+    this.#lastName = lastName;
     if (typeof (age) === "number") {
-      this.age = age;
+      this.#age = age;
     } else {
-      this.age = Number(age)
+      this.#age = Number(age)
     }
   }
   set firstName(newFirstName) {
-    this.firstName = newFirstName;
+    this.#firstName = newFirstName;
   }
   get firstName() {
-    return this.firstName;
+    return this.#firstName;
   }
 
   set lastName(newlastName) {
-    this.lastName = newlastName;
+    this.#lastName = newlastName;
   }
   get lastName() {
-    return this.lastName
+    return this.#lastName
   }
 
   set age(newAge) {
-    this.age = newAge;
+    this.#age = newAge;
   }
   get age() {
-    return this.age
+    return this.#age
   }
 
   get fullName() {
-    return this.firstName + " " + this.lastName
+    return this.#firstName + " " + this.#lastName
   }
 
 }
